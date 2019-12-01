@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: proxima-app
+  labels:
+    name: proxima
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: proxima
+    spec:
+      containers:
+      - name: proxima
+        image: proxima
+        ports:
+          - containerPort: 5000
+        livenessProbe:
+          httpGet:
+            path: /ping
+            port: 5000
+          initialDelaySeconds: 5
+          periodSeconds: 5

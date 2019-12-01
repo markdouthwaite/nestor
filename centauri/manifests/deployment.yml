@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: centauri-app
+  labels:
+    name: centauri
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: centauri-app
+    spec:
+      containers:
+      - name: centauri
+        image: centauri
+
+        livenessProbe:
+          httpGet:
+            path: /ping
+            port: 5000

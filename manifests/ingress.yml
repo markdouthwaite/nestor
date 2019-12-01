@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nestor-ingress
+#  annotations:
+#    nginx.ingress.kubernetes.io/rewrite-target: /
+#  namespace: default
+
+spec:
+#  tls:
+#    - secretName: nestor-tls
+  rules:
+  - http:
+      paths:
+        - path: /proxima
+          backend:
+            serviceName: proxima
+            servicePort: 5000
+
