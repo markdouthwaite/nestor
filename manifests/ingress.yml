@@ -7,8 +7,8 @@ metadata:
   namespace: default
 
 spec:
-#  tls:
-#    - secretName: nestor-tls
+  tls:
+    - secretName: nestor-tls
   rules:
   - http:
       paths:
