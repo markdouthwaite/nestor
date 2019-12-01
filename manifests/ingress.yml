@@ -2,8 +2,6 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: nestor-ingress
-#  annotations:
-#    nginx.ingress.kubernetes.io/rewrite-target: /
   namespace: default
 
 spec:
@@ -16,6 +14,7 @@ spec:
           backend:
             serviceName: proxima
             servicePort: proxima-tcp
+
         - path: /centauri
           backend:
             serviceName: centauri
