@@ -8,6 +8,6 @@ def home():
     return "Hello, world!"
 
 
-@app.route("/centauri/ping")
+@app.route("/ping")
 def ping():
     return "OK"

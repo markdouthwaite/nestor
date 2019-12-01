@@ -9,7 +9,7 @@ spec:
   template:
     metadata:
       labels:
-        app: proxima
+        app: proxima-app
     spec:
       containers:
       - name: proxima
