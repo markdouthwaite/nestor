@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: proxima
-        image: proxima
+        image: localhost:32000/proxima
         ports:
           - containerPort: 5000
 
