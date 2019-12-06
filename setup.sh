@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-apt-get update -y && install -y git docker.io nano python3.6
+apt-get update -y && install -y git docker.io nano
 
 # Setup microk8s
 snap install microk8s --classic --channel=1.14/stable
